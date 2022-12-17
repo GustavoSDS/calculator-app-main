@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+/* Theme Dark */
+/* Backgrounds */
+/* Keys */
+/* Text */
+/* Theme Light */
+/* Backgrounds */
+/* Keys */
+/* Text */
+/* Theme Violet */
+/* Backgrounds */
+/* Keys */
+/* Text */
+.page.light {
+  color: hsl(60deg, 10%, 19%);
+  background-color: hsl(0deg, 0%, 93%);
+}
+
+.btn-light {
+  background-color: hsl(0deg, 5%, 81%);
+}
+
+.circle-light {
+  background-color: hsl(25deg, 98%, 40%);
+}
+
+.result-light {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.keys-light {
+  background-color: hsl(0deg, 5%, 81%);
+}
+
+.key-light {
+  background-color: hsl(45deg, 7%, 89%);
+  box-shadow: 0px 4px 0px 0px hsl(35deg, 11%, 61%);
+}
+
+.color1-light {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(185deg, 42%, 37%);
+  box-shadow: 0px 4px 0px 0px hsl(185deg, 58%, 25%);
+}
+
+.color2-light {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(25deg, 98%, 40%);
+  box-shadow: 0px 4px 0px 0px hsl(25deg, 99%, 27%);
+}
+
+.page.dark {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(222deg, 26%, 31%);
+}
+
+.btn-dark {
+  background-color: hsl(223deg, 31%, 20%);
+}
+
+.circle-dark {
+  background-color: hsl(6deg, 63%, 50%);
+}
+
+.result-dark {
+  background-color: hsl(224deg, 36%, 15%);
+}
+
+.keys-dark {
+  background-color: hsl(223deg, 31%, 20%);
+}
+
+.key-dark {
+  color: hsl(221deg, 14%, 31%);
+  background-color: hsl(30deg, 25%, 89%);
+  box-shadow: 0px 4px 0px 0px hsl(28deg, 16%, 65%);
+}
+
+.color1-dark {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(225deg, 21%, 49%);
+  box-shadow: 0px 4px 0px 0px hsl(224deg, 28%, 35%);
+}
+
+.color2-dark {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0px 4px 0px 0px hsl(6deg, 70%, 34%);
+}
+
+.page.violet {
+  color: hsl(52deg, 100%, 62%);
+  background-color: hsl(268deg, 75%, 9%);
+}
+
+.btn-violet {
+  background-color: hsl(268deg, 71%, 12%);
+}
+
+.circle-violet {
+  background-color: hsl(176deg, 100%, 44%);
+}
+
+.result-violet {
+  background-color: hsl(268deg, 71%, 12%);
+}
+
+.keys-violet {
+  background-color: hsl(268deg, 71%, 12%);
+}
+
+.key-violet {
+  color: hsl(52deg, 100%, 62%);
+  background-color: hsl(268deg, 47%, 21%);
+  box-shadow: 0px 4px 0px 0px hsl(290deg, 70%, 36%);
+}
+
+.color1-violet {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(281deg, 89%, 26%);
+  box-shadow: 0px 4px 0px 0px hsl(285deg, 91%, 52%);
+}
+
+.color2-violet {
+  color: hsl(198deg, 20%, 13%);
+  background-color: hsl(176deg, 100%, 44%);
+  box-shadow: 0px 4px 0px 0px hsl(177deg, 92%, 70%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  font: 2rem "League Spartan", sans-serif;
+  font-weight: 700;
+}
+.page .container {
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  padding: 24px 24px 30px;
+}
+.page .container .header {
+  width: 100%;
+  height: 45px;
+  margin: 0 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .container .header__title {
+  font-size: 2rem;
+}
+.page .container .header .theme {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.875rem;
+}
+.page .container .header .theme span {
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+.page .container .header .theme__button-container {
+  width: 97px;
+  padding-left: 10px;
+}
+.page .container .header .theme__numbers {
+  width: 73px;
+  margin-left: 12px;
+  display: flex;
+  justify-content: space-around;
+}
+.page .container .header .theme__button-change {
+  width: 73px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 0 3px;
+  margin-left: 10px;
+  border-radius: 13px;
+}
+.page .container .header .theme__button-change:hover {
+  cursor: pointer;
+}
+.page .container .header .theme__circle {
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+}
+.page .container .calculator__result {
+  height: 88px;
+  margin-bottom: 24px;
+  padding-right: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 2.5rem;
+  border-radius: 12px;
+}
+.page .container .calculator__keys {
+  height: 423px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+  border-radius: 12px;
+}
+.page .container .calculator__key {
+  height: 60px;
+  display: grid;
+  place-content: center;
+  font-size: 2rem;
+  font-family: "League Spartan", sans-serif;
+  border-radius: 4px;
+}
+.page .container .calculator__key:hover {
+  cursor: pointer;
+}
+.page .container .calculator__key:nth-child(17) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.page .container .calculator__key:nth-child(18) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.page .container .calculator__key:nth-child(17), .page .container .calculator__key:nth-child(18), .page .container .calculator__key:nth-child(4) {
+  font-size: 1.25rem;
+}
+.page .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.page .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+@media (min-width: 1440px) {
+  .page .container {
+    width: 1440px;
+    height: 900px;
+    padding: 95px 450px;
+  }
+  .page .container .calculator__result {
+    height: 127px;
+  }
+  .page .container .calculator__keys {
+    height: 482px;
+    padding: 30px;
+    gap: 25px;
+  }
+  .page .container .calculator__key {
+    border-radius: 12px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
