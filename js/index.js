@@ -12,7 +12,7 @@ let keyDel = document.querySelector('#keyDel');
 let keyRest = document.querySelector('#keyReset');
 let keyEqual = document.querySelector('#keyEqual');
 
-let theme = 2;
+let theme = 3;
 btnChangeTheme.addEventListener('click', () => {
     if (theme === 1) {
         changeClassName('violet', 'light');
