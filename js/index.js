@@ -29,7 +29,73 @@ btnChangeTheme.addEventListener('click', () => {
     }
 });
 
+let val1, val2, res, operator, valueKey;
 
+key.forEach((key) => {
+    key.addEventListener('click', () => {
+        valueKey = key.innerText;
+
+        result.innerText === '00' ? empty() : '';
+
+        if (isFinite(valueKey)) { val1 = result.innerText += valueKey; }
+
+        valueKey === '+' ? (changeVal(val1, '+')) : valueKey === '-' ? (changeVal(val1, '-')) :
+        valueKey === 'x' ? (changeVal(val1, '*')) : valueKey === '/' ? (changeVal(val1, '/')) : 
+        valueKey === 'RESET' ? reset() : valueKey === 'DEL' ? empty() : '';
+
+        if (valueKey === '=') {
+            result.innerText = valueKey === '=' ? operations(operator, val2, parseInt(val1)) : 'is not a valid';
+            val1 = parseInt(result.innerText);
+        }
+
+    });
+});
+
+function empty() {
+    return result.innerText = '';
+}
+
+function reset() {
+    return empty(), operator = '', val1 = '', val2 = 0;
+}
+function changeVal(val1, operat) {
+    val2 = parseInt(val1);
+    empty();
+    operator = operat;
+    return val2, operator;
+}
+
+function operations(operator, val1, val2) {
+    switch (operator) {
+        case '+': return val1 + val2;
+            break;
+        case '-': return val1 - val2;
+            break;
+        case '/': return val1 / val2;
+            break;
+        case '*': return val1 * val2;
+            break;
+        default:
+            break;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FUNCTIONS */
 function changeClassName(actualClass, className) {
     addRemoveClass(page, actualClass, className);
     addRemoveClass(classButton, 'btn-' + actualClass, 'btn-' + className);
@@ -39,9 +105,8 @@ function changeClassName(actualClass, className) {
     addRemoveClass(keyDel, 'color1-' + actualClass, 'color1-' + className);
     addRemoveClass(keyRest, 'color1-' + actualClass, 'color1-' + className);
     addRemoveClass(keyEqual, 'color2-' + actualClass, 'color2-' + className);
-
     key.forEach((key) => {
-        addRemoveClass(key, 'key-' + actualClass, 'key-'+ className);
+        addRemoveClass(key, 'key-' + actualClass, 'key-' + className);
     });
 
 }
