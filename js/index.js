@@ -39,7 +39,11 @@ key.forEach((key) => {
 
         if (isFinite(valueKey)) { val1 = result.innerText += valueKey; }
         else if (valueKey === '.') {
+           if(valueKey === ''){
+            alert('Please enter a number');
+           }else{
             val1 = result.innerText += valueKey;
+           }
         }
 
         valueKey === '+' ? (changeVal(val1, '+')) : valueKey === '-' ? (changeVal(val1, '-')) :
