@@ -38,14 +38,17 @@ key.forEach((key) => {
         result.innerText === '00' ? empty() : '';
 
         if (isFinite(valueKey)) { val1 = result.innerText += valueKey; }
+        else if (valueKey === '.') {
+            val1 = result.innerText += valueKey;
+        }
 
         valueKey === '+' ? (changeVal(val1, '+')) : valueKey === '-' ? (changeVal(val1, '-')) :
-        valueKey === 'x' ? (changeVal(val1, '*')) : valueKey === '/' ? (changeVal(val1, '/')) : 
-        valueKey === 'RESET' ? reset() : valueKey === 'DEL' ? empty() : '';
+        valueKey === 'x' ? (changeVal(val1, '*')) : valueKey === '/' ? (changeVal(val1, '/')) :
+        valueKey === 'RESET' ? reset() : valueKey === 'DEL' ? del(result.innerText) : '';
 
         if (valueKey === '=') {
-            result.innerText = valueKey === '=' ? operations(operator, val2, parseInt(val1)) : 'is not a valid';
-            val1 = parseInt(result.innerText);
+            result.innerText = valueKey === '=' ? operations(operator, val2, parseFloat(val1)).toFixed(1) : 'is not a valid';
+            val1 = parseFloat(result.innerText);
         }
 
     });
@@ -58,8 +61,13 @@ function empty() {
 function reset() {
     return empty(), operator = '', val1 = '', val2 = 0;
 }
+
+function del(val) {
+    return val1 = result.innerText = val.substring(0, val.length - 1);
+}
+
 function changeVal(val1, operat) {
-    val2 = parseInt(val1);
+    val2 = parseFloat(val1);
     empty();
     operator = operat;
     return val2, operator;
