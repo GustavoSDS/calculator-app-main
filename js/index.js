@@ -39,7 +39,6 @@ key.forEach((key) => {
 
         if (isFinite(valueKey)) { val1 = result.innerText += valueKey; }
         else if (valueKey === '.') {
-            console.log(valueKey);
             if (result.innerText === '') {
                 alert('Please enter a number');
             } else {
