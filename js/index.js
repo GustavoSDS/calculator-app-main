@@ -40,16 +40,16 @@ key.forEach((key) => {
         if (isFinite(valueKey)) { val1 = result.innerText += valueKey; }
         else if (valueKey === '.') {
             console.log(valueKey);
-           if(valueKey === ''){
-            alert('Please enter a number');
-           }else{
-            val1 = result.innerText += valueKey;
-           }
+            if (result.innerText === '') {
+                alert('Please enter a number');
+            } else {
+                val1 = result.innerText += valueKey;
+            }
         }
 
         valueKey === '+' ? (changeVal(val1, '+')) : valueKey === '-' ? (changeVal(val1, '-')) :
-        valueKey === 'x' ? (changeVal(val1, '*')) : valueKey === '/' ? (changeVal(val1, '/')) :
-        valueKey === 'RESET' ? reset() : valueKey === 'DEL' ? del(result.innerText) : '';
+            valueKey === 'x' ? (changeVal(val1, '*')) : valueKey === '/' ? (changeVal(val1, '/')) :
+                valueKey === 'RESET' ? reset() : valueKey === 'DEL' ? del(result.innerText) : '';
 
         if (valueKey === '=') {
             result.innerText = valueKey === '=' ? operations(operator, val2, parseFloat(val1)).toFixed(1) : 'is not a valid';
